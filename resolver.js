@@ -30,6 +30,54 @@ export function keyFinder(kingdom){
     }
 }
 
-function seasarCipher(letter, key){
-
+function emblemFinder(kingdom){
+    switch(kingdom){
+        case "AIR": 
+            return "OWL";
+        case "WATER":
+            return "OCTOPUS";
+        case "SPACE":
+            return "GORILLA";
+        case "ICE":
+            return "MAMMOTH";
+        case "LAND":
+            return "PANDA";
+        case "FIRE": 
+            return "DRAGON";
+        default:
+            return "";
+    }
 }
+
+export function check(decryptedCode, kingdom){
+    let emblem = emblemFinder(kingdom);
+    // console.log(emblem);
+    let arr = emblem.split('')
+    decryptedCode = decryptedCode.split('');
+    for(let i = 0;i < emblem.length; i++){
+        let c = 0;
+        for(let j = 0;j < decryptedCode.length; j++){
+            if(decryptedCode[j] === emblem[i])
+            {
+                // console.log(decryptedCode[j]);
+                c++;
+                decryptedCode.splice(j,1);
+                break;
+            }
+        }
+        // console.log(c);
+        if(c > 0){
+            // console.log("arr->", arr);
+            arr.shift();
+        }
+        else{
+            return 0;
+        }
+    }
+    // console.log(arr);
+    if(arr.length === 0){
+        return 1;
+    }
+}
+
+// console.log(check("OWLLLLLL", "AIR"));
