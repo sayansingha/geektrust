@@ -7,7 +7,7 @@ export function crack(encryptedString, unshiftAmount){
         } else if(encryptedCharacter >= 65 && encryptedCharacter <= 90) {
             plainText += String.fromCharCode((encryptedCharacter-65 - unshiftAmount + 26) %26 + 65 );
         } else {
-            plainText += String.fromCharCode(plainCharacter);
+            plainText += String.fromCharCode(encryptedCharacter);
         }
     }
     return plainText;
