@@ -1,5 +1,5 @@
-// import { kingdoms, emblem } from "./utils/magicStrings";
-const {kingdoms, emblem } = require('./utils/magicStrings');
+const { emblem } = require('./magicStrings');
+const kingdoms = Object.keys(emblem);
 function crack(encryptedString, unshiftAmount){
     var plainText = "";
     for(var i = 0; i < encryptedString.length; i++) {
@@ -15,42 +15,12 @@ function crack(encryptedString, unshiftAmount){
     return plainText;
 }
 
-function keyFinder(value){
-    switch(value){
-        case kingdoms[0]: 
-            return emblem[kingdoms[0]].length;
-        case kingdoms[1]:
-            return emblem[kingdoms[1]].length;
-        case kingdoms[2]:
-            return emblem[kingdoms[2]].length;
-        case kingdoms[3]:
-            return emblem[kingdoms[3]].length;
-        case kingdoms[4]:
-            return emblem[kingdoms[4]].length;
-        case kingdoms[5]: 
-            return emblem[kingdoms[5]].length;
-        default:
-            return 0;
+function emblemFinder(value) {
+    const emblemValue = emblem[value];
+    if (emblemValue) {
+        return emblemValue;
     }
-}
-
-function emblemFinder(value){
-    switch(value){
-        case kingdoms[0]: 
-            return emblem[kingdoms[0]];
-        case kingdoms[1]:
-            return emblem[kingdoms[1]];
-        case kingdoms[2]:
-            return emblem[kingdoms[2]];
-        case kingdoms[3]:
-            return emblem[kingdoms[3]];
-        case kingdoms[4]:
-            return emblem[kingdoms[4]];
-        case kingdoms[5]: 
-            return emblem[kingdoms[5]];
-        default:
-            return "";
-    }
+    return 0;
 }
 
 function check(decryptedCode, kingdom){
@@ -84,5 +54,6 @@ function check(decryptedCode, kingdom){
     }
 }
 module.exports.crack = crack;
-module.exports.keyFinder = keyFinder;
+module.exports.emblemFinder = emblemFinder;
 module.exports.check = check;
+// console.log(emblemFinder("WATER").length);

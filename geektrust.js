@@ -1,9 +1,15 @@
-import { crack, keyFinder, check } from './resolver.js' 
-
+// import { crack, keyFinder, check } from './resolver.js' 
+const { crack, check, emblemFinder } = require('./utils/index.js')
+// import { readFileSync } from "fs";
+const fs = require("fs") 
 const filename = process.argv[2];
-console.log(filename);
-let x = ["AIR OWLAOWLBOWLC", "LAND FDIXXSOKKOFBBMU", "ICE MOMA MVT MTMHTM", "WATER SUMMER IS COMING", "FIRE AJXGAMUTA"];
+var array  = fs.readFileSync(filename, "utf-8").toString().split("\n");
+// let x = ["AIR OWLAOWLBOWLC", "LAND FDIXXSOKKOFBBMU", "ICE MOMA MVT MTMHTM", "WATER SUMMER IS COMING", "FIRE AJXGAMUTA"];
+// let y = ['SPACE'];
+
+let x = array;
 let y = ['SPACE'];
+
 for (let i = 0;i < x.length; i++){
     let index = x[i].indexOf(' ');
     let arr = [];
@@ -11,7 +17,7 @@ for (let i = 0;i < x.length; i++){
     arr.push(x[i].slice(index + 1, x[i].length).trim());
     // console.log(arr);
     
-    let key = keyFinder(arr[0]);
+    let key = emblemFinder(arr[0]).length;
     let decryptedCode = crack(arr[1].trim(), key);
     // console.log(decryptedCode);
     let c = check(decryptedCode, arr[0]);

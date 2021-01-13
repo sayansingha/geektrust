@@ -1,0 +1,15 @@
+- file structure--(half done)
+- utils file has to be separate -- (done)
+- store the magic strings in a config or other reference file -- (done)
+- add comments to your util functions and throughout the codebase according to some standard practices
+- name the files correctly -- (done);
+- test cases
+- readme file
+- pure functional or Object Oriented Model
+
+-edge cases
+
+
+questions to be asked:
+1. if I have to add another kingdom what changes needs to be done?
+2. (leader condition changed -> what are the changes?)
