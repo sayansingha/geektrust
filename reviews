@@ -3,7 +3,7 @@
 - store the magic strings in a config or other reference file -- (done)
 - add comments to your util functions and throughout the codebase according to some standard practices
 - name the files correctly -- (done);
-- test cases
+- test cases -- (undone)(add more test cases and feature test)
 - readme file
 - pure functional or Object Oriented Model
 

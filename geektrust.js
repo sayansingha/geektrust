@@ -32,5 +32,3 @@ if(y.length >= 3){
 else{
     console.log("NONE");
 }
-
-
