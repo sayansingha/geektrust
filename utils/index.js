@@ -98,6 +98,11 @@ function checkDecryptedCodeMatchesEmblem(decryptedCode, kingdom){
 
 
 function main(input){
+
+
+    if(input.length < 3){
+        return "NONE";
+    }
     
     let kingdomsUnderShan = ['SPACE']; 
 

@@ -10,4 +10,7 @@ test('feature test to check if the main feature is working right', ()=>{
     expect(
         main(["AIR OWLAOWLBOWLC", "LAND FDIXXSOKKOFBBMU", "ICE MOM", "WATER SUMMER IS COMING", "FIRE AJXGA"])
     ).toEqual('NONE')
+    expect(
+        main(["AIR OWLAOWLBOWLC", "LAND FDIXXSOKKOFBBMU"])
+    ).toEqual("NONE")
 })
