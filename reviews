@@ -5,7 +5,7 @@
 - name the files correctly -- (done);
 - test cases -- (done)
 - readme file -- (done)
-- pure functional or Object Oriented Model -- pure functional
+- pure functional or Object Oriented Model -- pure functional(done)
 
 -edge cases
 
@@ -13,3 +13,19 @@
 questions to be asked:
 1. if I have to add another kingdom what changes needs to be done?
 2. (leader condition changed -> what are the changes?)
+
+
+Clean Code Practices:
+1. Variables:
+    1. Intention-revealing name,
+    2. Meaningful distinctions,
+    3. NO extra, unnecessary nouns,
+    4. Make variable names easy to pronounce
+2. Functions: 
+    1. Does only one thing(abstraction),
+    2. Use long, descriptive names,
+    3. Avoid long argument list,
+    4. Reduce aside effects(eg./ it doesn't change any original content, etc),
+    5. Organize your functions according to the step-down rule,
+    6. Should either query or modify(but not both),
+    7. 

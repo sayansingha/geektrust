@@ -1,5 +1,5 @@
 
-const emblem = {
+const emblemsForKingdoms = {
     "AIR" : "OWL",
     "SPACE": "GORILLA",
     "LAND": "PANDA",
@@ -9,6 +9,6 @@ const emblem = {
 }
 
 
-module.exports.emblem = emblem;
+module.exports.emblemsForKingdoms = emblemsForKingdoms;
 
 
